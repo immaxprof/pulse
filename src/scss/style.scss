@@ -5,3 +5,14 @@
 @import "header";
 @import "promo";
 @import "titles";
+
+* {
+  font-family: "Museo Sans", sans-serif;
+}
+
+.container {
+  max-width: 970px;
+  min-width: 302px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
