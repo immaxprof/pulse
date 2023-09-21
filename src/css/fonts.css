@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "Roboto";
+  /* src: local("Roboto Black"), local("Roboto-Black"), */
+  src: url("../fonts/Roboto-Black.ttf") format("opentype");
+  font-style: normal;
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "Museo Sans";
+  src: local("Museo Sans Cyrl"), local("MuseoSansCyrl"),
+    url("../fonts/MuseoSansCyrl-700.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Museo Sans";
+  src: local("Museo Sans Cyrl"), local("MuseoSansCyrl"),
+    url("../fonts/MuseoSansCyrl-500.woff") format("woff");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Museo Sans";
+  src: local("Museo Sans Cyrl"), local("MuseoSansCyrl"),
+    url("../fonts/MuseoSansCyrl-300.woff") format("woff");
+  font-style: normal;
+  font-weight: 300;
+}
+
+/* @font-face {
+  font-family: "Museo Sans";
+  src: local("Museo Sans Cyrl"), local("MuseoSansCyrl"),
+    url("../fonts/museosanscyr-100.ttf") format("opentype");
+  font-style: normal;
+  font-weight: 100;
+} */
+
+@font-face {
+  font-family: "Museo Sans";
+  src: local("Museo Sans Cyrl"), local("MuseoSansCyrl"),
+    url("../fonts/MuseoSansCyrl-100.woff") format("woff");
+  font-style: normal;
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Museo Sans";
+  src: local("Museo Sans Cyrl"), local("MuseoSansCyrl"),
+    url("../fonts/MuseoSansCyrl-900.woff") format("woff");
+  font-style: normal;
+  font-weight: 900;
+}
