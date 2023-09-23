@@ -1,7 +1,7 @@
 $(document).ready(function () {
   $(".carousel__inner").slick({
     dots: false,
-    speed: 300,
+    speed: 800,
     adaptiveHeight: false,
     arrows: true,
     prevArrow:
