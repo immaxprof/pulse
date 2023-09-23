@@ -72,6 +72,7 @@ function startWatch() {
   watch(`src/${preprocessor}/*.${preprocessor}`, styles);
   watch(`src/${preprocessor}/*.${preprocessor}`, stylesExt);
   watch("src/*.html").on("change", browserSync.reload);
+  // watch("src/js/*.js").on("change", browserSync.reload);
 }
 
 // gulp.task("watch", function () {

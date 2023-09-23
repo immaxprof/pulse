@@ -97,6 +97,47 @@
     margin-bottom: 10px;
   }
 }
+.consultation {
+  min-height: 680px;
+  padding: 100px 0 92px;
+  background: url("../img/consultation.jpg") center center/cover no-repeat;
+}
+.consultation__descr {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+@media (max-width: 690px) {
+  .consultation {
+    min-height: 620px;
+    padding: 80px 0 70px;
+    background-position: left 60% center;
+  }
+  .consultation__descr {
+    font-size: 18px;
+    padding-left: calc((100% - 300px) / 2);
+  }
+}
+@media (max-width: 476px) {
+  .consultation {
+    min-height: 600px;
+    padding: 70px 0 70px;
+  }
+  .consultation__descr {
+    font-size: 18px;
+  }
+}
+@media (max-width: 400px) {
+  .consultation {
+    min-height: 600px;
+    padding: 60px 0 70px;
+  }
+  .consultation__descr {
+    font-size: 16px;
+  }
+}
 .button {
   display: block;
   border-radius: 5px;
@@ -107,6 +148,10 @@
   font-weight: 500;
   text-transform: uppercase;
 }
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: -2px;
+}
 .button--top {
   width: 150px;
   height: 30px;
@@ -116,6 +161,11 @@
   height: 50px;
   font-size: 16px;
   margin-bottom: 8px;
+}
+.button--feedform {
+  width: 303px;
+  height: 58px;
+  font-size: 16px;
 }
 
 @media (max-width: 690px) {
@@ -388,8 +438,6 @@
 }
 @media (max-width: 400px) {
   .promo {
-    min-height: 600px;
-    padding-bottom: 40px;
     background-position: left 25% center;
   }
   .promo__header {
@@ -412,6 +460,163 @@
   }
   .promo__link {
     font-size: 12px;
+  }
+}
+.title {
+  color: #0d0d0d;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.title--left {
+  color: #fff;
+  font-size: 36px;
+  text-align: left;
+}
+
+@media (max-width: 890px) {
+  .title--left {
+    font-size: 32px;
+  }
+}
+@media (max-width: 690px) {
+  .title--left {
+    font-size: 28px;
+    padding-left: calc((100% - 300px) / 2);
+  }
+}
+@media (max-width: 660px) {
+  .title--left {
+    font-size: 26px;
+  }
+}
+.feedform {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 36px;
+}
+.feedform input {
+  display: block;
+  width: 300px;
+  height: 54px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 0 21px;
+  font-size: 16px;
+}
+.feedform input:last-of-type {
+  margin-bottom: 20px;
+}
+.feedform input::-webkit-input-placeholder {
+  color: #4b4b4b;
+  font-weight: 300;
+  font-size: 14px;
+}
+.feedform input::-moz-placeholder {
+  color: #4b4b4b;
+  font-weight: 300;
+  font-size: 14px;
+}
+.feedform input:-ms-input-placeholder {
+  color: #4b4b4b;
+  font-weight: 300;
+  font-size: 14px;
+}
+.feedform input::-ms-input-placeholder {
+  color: #4b4b4b;
+  font-weight: 300;
+  font-size: 14px;
+}
+.feedform input::placeholder {
+  color: #4b4b4b;
+  font-weight: 300;
+  font-size: 14px;
+}
+.feedform input:focus-visible {
+  outline: 2px solid blue;
+  outline-offset: -3px;
+}
+
+@media (max-width: 690px) {
+  .feedform {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.carousel {
+  padding: 81px 0;
+}
+.carousel__inner {
+  position: relative;
+  width: 750px;
+  margin: 0 auto;
+}
+.carousel__wrapper img {
+  width: 100%;
+  aspect-ratio: 1.3;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+}
+.carousel .slick-prev,
+.carousel .slick-next {
+  position: absolute;
+  width: 31px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.carousel .slick-prev:focus-visible,
+.carousel .slick-next:focus-visible {
+  outline: 2px solid grey;
+}
+.carousel .slick-prev {
+  left: -97px;
+}
+.carousel .slick-next {
+  right: -97px;
+}
+.carousel .slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 0;
+}
+.carousel .slick-dots button {
+  width: 15px;
+  aspect-ratio: 1;
+  margin: 0 10px;
+  font-size: 0;
+  background-color: #000;
+  border-radius: 50%;
+}
+.carousel .slick-dots .slick-active button {
+  border: 1px solid #000;
+  background-color: #fff;
+}
+
+@media (max-width: 890px) {
+  .carousel__inner {
+    width: 85%;
+  }
+}
+@media (max-width: 690px) {
+  .carousel .slick-dots button {
+    width: 8px;
   }
 }
 * {

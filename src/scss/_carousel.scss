@@ -1,0 +1,82 @@
+.carousel {
+  padding: 81px 0;
+
+  &__inner {
+    position: relative;
+    width: 750px;
+    margin: 0 auto;
+  }
+
+  &__wrapper {
+    img {
+      width: 100%;
+      //   height: 580px;
+      aspect-ratio: 1.3;
+      object-fit: contain;
+      object-position: 50% 50%;
+    }
+  }
+
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    width: $arrow-width;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    &:focus-visible {
+      outline: 2px solid grey;
+    }
+  }
+
+  .slick-prev {
+    left: -$arrow-width - 66px;
+  }
+
+  .slick-next {
+    right: -$arrow-width - 66px;
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    // width: 100px;
+    line-height: 0;
+
+    button {
+      width: 15px;
+      aspect-ratio: 1;
+      margin: 0 10px;
+      font-size: 0;
+
+      background-color: #000;
+      border-radius: 50%;
+    }
+
+    .slick-active {
+      button {
+        border: 1px solid #000;
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+@media (max-width: 890px) {
+  .carousel {
+    &__inner {
+      width: 85%;
+    }
+  }
+}
+
+@media (max-width: 690px) {
+  .carousel {
+    .slick-dots {
+      button {
+        width: 8px;
+      }
+    }
+  }
+}

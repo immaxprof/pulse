@@ -9,6 +9,11 @@
   font-weight: 500;
   text-transform: uppercase;
 
+  &:focus-visible {
+    outline: 1px solid #fff;
+    outline-offset: -2px;
+  }
+
   &--top {
     width: 150px;
     height: 30px;
@@ -20,6 +25,12 @@
 
     font-size: 16px;
     margin-bottom: 8px;
+  }
+
+  &--feedform {
+    width: 303px;
+    height: 58px;
+    font-size: 16px;
   }
 }
 
@@ -37,6 +48,5 @@
     &--top {
       width: 130px;
     }
-   
   }
 }
