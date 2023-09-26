@@ -32,29 +32,40 @@ $(document).ready(function () {
 });
 
 let catalogItemFront = document.querySelector(".catalog-item__front");
+let catalogItemBack = document.querySelector(".catalog-item__back");
+
 let frontBackSwitchers = document.querySelectorAll(".catalog-item__btn");
 
-const toggleFrontBack = () => {
-  frontBackSwitchers.forEach((el) => {
-    el.setAttribute("disabled", true);
-  });
-  setTimeout(() => {
-    frontBackSwitchers.forEach((el) => {
-      el.removeAttribute("disabled");
-    });
-  }, 300);
+// const toggleFrontBack = () => {
+//   frontBackSwitchers.forEach((el) => {
+//     el.setAttribute("disabled", true);
+//   });
+//   setTimeout(() => {
+//     frontBackSwitchers.forEach((el) => {
+//       el.removeAttribute("disabled");
+//     });
+//   }, 300);
 
-  catalogItemFront.classList.toggle("catalog-item__front--fadeout");
+//   catalogItemFront.classList.toggle("catalog-item__front--fadeout");
 
-  if (catalogItemFront.classList.contains("catalog-item__front--back")) {
-    catalogItemFront.classList.remove("catalog-item__front--back");
-  } else {
-    setTimeout(() => {
-      catalogItemFront.classList.add("catalog-item__front--back");
-    }, 300);
-  }
+//   if (catalogItemFront.classList.contains("catalog-item__front--back")) {
+//     catalogItemFront.classList.remove("catalog-item__front--back");
+//   } else {
+//     setTimeout(() => {
+//       catalogItemFront.classList.add("catalog-item__front--back");
+//     }, 300);
+//   }
+// };
+
+// frontBackSwitchers.forEach((el) => {
+//   el.addEventListener("click", toggleFrontBack);
+// });
+
+const toggleBack = () => {
+  catalogItemBack.classList.toggle("catalog-item__back--show");
+  catalogItemBack.scrollTo({ top: 0 });
 };
 
 frontBackSwitchers.forEach((el) => {
-  el.addEventListener("click", toggleFrontBack);
+  el.addEventListener("click", toggleBack);
 });
