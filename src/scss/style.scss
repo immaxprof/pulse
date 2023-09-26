@@ -8,9 +8,14 @@
 @import "titles";
 @import "forms";
 @import "carousel";
+@import "catalog";
+@import "catalog-item";
 
 * {
   font-family: "Museo Sans", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  //   color: red;
 }
 
 .container {
@@ -18,4 +23,10 @@
   min-width: 302px;
   padding: 0 10px;
   margin: 0 auto;
+}
+
+:focus-visible {
+  outline: 1px solid blue;
+  outline-offset: 2px;
+  border-radius: 3px;
 }

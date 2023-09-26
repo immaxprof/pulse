@@ -3,11 +3,16 @@
   font-size: 30px;
   font-weight: 700;
   text-transform: uppercase;
+  text-align: center;
 
   &--left {
     color: #fff;
     font-size: 36px;
     text-align: left;
+  }
+
+  &--regular {
+    font-weight: 400;
   }
 }
 
