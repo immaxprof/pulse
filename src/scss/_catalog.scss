@@ -1,6 +1,10 @@
 .catalog {
   padding-bottom: 59px;
 
+  .container {
+    padding: 0;
+  }
+
   &__tabs {
     display: flex;
     // align-items: flex-start;
@@ -57,7 +61,7 @@
 
   &__content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     margin-top: 37px;
   }
