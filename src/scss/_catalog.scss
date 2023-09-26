@@ -1,4 +1,6 @@
 .catalog {
+  padding-bottom: 59px;
+
   &__tabs {
     display: flex;
     // align-items: flex-start;
@@ -54,6 +56,40 @@
   }
 
   &__content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     margin-top: 37px;
+  }
+}
+
+@media (max-width: 990px) {
+  .catalog {
+    &__content {
+      justify-content: space-evenly;
+    }
+
+    &__tab {
+      &:hover {
+        box-shadow: none;
+        border: 2px solid #d0d0d0;
+      }
+
+      &--active {
+        &:hover {
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 690px) {
+  .catalog {
+    &__tab {
+      span {
+        font-size: 16px;
+      }
+    }
   }
 }

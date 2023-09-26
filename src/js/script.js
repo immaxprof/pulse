@@ -31,10 +31,32 @@ $(document).ready(function () {
   });
 });
 
-let catalogItemFront = document.querySelector(".catalog-item__front");
-let catalogItemBack = document.querySelector(".catalog-item__back");
+// let catalogItemFront = document.querySelector(".catalog-item__front");
+// let catalogItemBack = document.querySelector(".catalog-item__back");
 
-let frontBackSwitchers = document.querySelectorAll(".catalog-item__btn");
+// let frontBackSwitchers = document.querySelectorAll(".catalog-item__btn");
+
+let catalogItems = document.querySelectorAll(".catalog-item");
+
+const toggleBack = (front, back) => {
+  back.classList.toggle("catalog-item__back--show");
+  front.classList.toggle("catalog-item__front--fadeout");
+  back.scrollTo({ top: 0 });
+};
+
+const configureCatalogItem = (catalogItem) => {
+  const btns = catalogItem.querySelectorAll(".catalog-item__btn");
+  const front = catalogItem.querySelector(".catalog-item__front");
+  const back = catalogItem.querySelector(".catalog-item__back");
+
+  btns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      toggleBack(front, back);
+    });
+  });
+};
+
+catalogItems.forEach((catalogItem) => configureCatalogItem(catalogItem));
 
 // const toggleFrontBack = () => {
 //   frontBackSwitchers.forEach((el) => {
@@ -61,12 +83,12 @@ let frontBackSwitchers = document.querySelectorAll(".catalog-item__btn");
 //   el.addEventListener("click", toggleFrontBack);
 // });
 
-const toggleBack = () => {
-  catalogItemBack.classList.toggle("catalog-item__back--show");
-  catalogItemFront.classList.toggle("catalog-item__front--fadeout");
-  catalogItemBack.scrollTo({ top: 0 });
-};
+// const toggleBack = () => {
+//   catalogItemBack.classList.toggle("catalog-item__back--show");
+//   catalogItemFront.classList.toggle("catalog-item__front--fadeout");
+//   catalogItemBack.scrollTo({ top: 0 });
+// };
 
-frontBackSwitchers.forEach((el) => {
-  el.addEventListener("click", toggleBack);
-});
+// frontBackSwitchers.forEach((el) => {
+//   el.addEventListener("click", toggleBack);
+// });

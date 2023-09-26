@@ -1,6 +1,7 @@
 .catalog-item {
   width: 303px;
   border: 2px solid #e8e8e8;
+  margin-bottom: 20px;
 
   &:hover {
     outline: 1px solid #000;
@@ -83,10 +84,6 @@
       opacity: 1;
     }
 
-    // &--scroll {
-    //   overflow-y: scroll;
-    // }
-
     background-color: #fff;
 
     ul {
@@ -145,4 +142,21 @@
 
 .catalog-item__btn[disabled]:hover {
   cursor: pointer;
+}
+
+@media (max-width: 990px) {
+  .catalog-item {
+    margin-right: 10px;
+    margin-left: 10px;
+
+    &:hover {
+      outline: none;
+    }
+
+    &__btn {
+      &:hover {
+        font-weight: 400;
+      }
+    }
+  }
 }

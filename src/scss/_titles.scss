@@ -27,6 +27,10 @@
     font-size: 28px;
     padding-left: calc((100% - $input-width) / 2);
   }
+
+  .title--regular {
+    font-size: 26px;
+  }
 }
 
 @media (max-width: 660px) {
