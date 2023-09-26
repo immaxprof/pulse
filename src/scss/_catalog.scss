@@ -2,6 +2,8 @@
   &__tabs {
     display: flex;
     // align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
     width: fit-content;
     margin: 46px auto 0;
   }
@@ -13,7 +15,7 @@
 
     width: 222px;
     height: 52px;
-    margin: 0 5px;
+    margin: 0 5px 20px;
     text-align: center;
 
     color: #6b6b6b;
@@ -52,8 +54,6 @@
   }
 
   &__content {
-    margin-top: 57px;
+    margin-top: 37px;
   }
 }
-
-

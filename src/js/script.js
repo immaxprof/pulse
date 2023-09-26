@@ -63,6 +63,7 @@ let frontBackSwitchers = document.querySelectorAll(".catalog-item__btn");
 
 const toggleBack = () => {
   catalogItemBack.classList.toggle("catalog-item__back--show");
+  catalogItemFront.classList.toggle("catalog-item__front--fadeout");
   catalogItemBack.scrollTo({ top: 0 });
 };
 
