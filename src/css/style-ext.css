@@ -668,10 +668,8 @@
   border: 2px solid #d0d0d0;
   -webkit-transform: skew(-35deg);
           transform: skew(-35deg);
-  -webkit-transition: -webkit-box-shadow 0.5s;
-  transition: -webkit-box-shadow 0.5s;
-  transition: box-shadow 0.5s;
-  transition: box-shadow 0.5s, -webkit-box-shadow 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   cursor: pointer;
 }
 .catalog__tab:hover {

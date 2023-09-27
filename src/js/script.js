@@ -31,6 +31,23 @@ $(document).ready(function () {
   });
 });
 
+// TABS
+
+const tabsContainer = document.querySelector(".catalog__tabs");
+const tabs = tabsContainer.querySelectorAll(".catalog__tab");
+
+const makeTabActive = (tab) => {
+  const prevActiveTab = tabsContainer.querySelector(".catalog__tab--active");
+  prevActiveTab.classList.remove("catalog__tab--active");
+  tab.classList.add("catalog__tab--active");
+};
+
+tabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    makeTabActive(tab);
+  });
+});
+
 // let catalogItemFront = document.querySelector(".catalog-item__front");
 // let catalogItemBack = document.querySelector(".catalog-item__back");
 
