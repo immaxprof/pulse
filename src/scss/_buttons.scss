@@ -9,6 +9,14 @@
   font-weight: 500;
   text-transform: uppercase;
 
+  &:hover {
+    letter-spacing: 0.06rem;
+    box-shadow: 7px 5px 8px -4px rgb(255, 255, 255, 1);
+    font-weight: 700;
+  }
+
+  transition: 0.2s all;
+
   &:focus-visible {
     outline: 1px solid #fff;
     outline-offset: -2px;
@@ -37,6 +45,11 @@
     width: 135px;
     height: 44px;
     font-size: 14px;
+
+    &:hover {
+      letter-spacing: 0.1rem;
+      box-shadow: 5px 5px 8px -4px rgb(0, 0, 0, 1);
+    }
   }
 }
 
@@ -53,6 +66,12 @@
   .button {
     &--top {
       width: 130px;
+    }
+
+    &:hover {
+      letter-spacing: normal;
+      box-shadow: none;
+      font-weight: 500;
     }
   }
 }
