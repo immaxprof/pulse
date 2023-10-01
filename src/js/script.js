@@ -33,18 +33,47 @@ $(document).ready(function () {
 
 // TABS
 
-const tabsContainer = document.querySelector(".catalog__tabs");
-const tabs = tabsContainer.querySelectorAll(".catalog__tab");
+const catalog = document.querySelector(".catalog");
+const catalogContents = catalog.querySelectorAll(".catalog__content");
+const tabs = catalog.querySelectorAll(".catalog__tab");
 
-const makeTabActive = (tab) => {
-  const prevActiveTab = tabsContainer.querySelector(".catalog__tab--active");
-  prevActiveTab.classList.remove("catalog__tab--active");
-  tab.classList.add("catalog__tab--active");
+const resetCatalogContent = (content) => {
+  backVisibleBtns = content.querySelectorAll(".catalog-item__back--show");
+  frontInvisibleBtns = content.querySelectorAll(
+    ".catalog-item__front--fadeout"
+  );
+  backVisibleBtns.forEach((btn) =>
+    btn.classList.remove("catalog-item__back--show")
+  );
+  frontInvisibleBtns.forEach((btn) =>
+    btn.classList.remove("catalog-item__front--fadeout")
+  );
 };
 
-tabs.forEach((tab) => {
+const makeTabActive = (tab, cl) => {
+  const prevActiveTab = catalog.querySelector("." + cl);
+  const prevActiveContent = catalog.querySelector(
+    ".catalog__content:not(.visually-hidden)"
+  );
+
+  resetCatalogContent(prevActiveContent);
+
+  prevActiveTab.classList.remove(cl);
+  tab.classList.add(cl);
+};
+
+const showContent = (index, cl) => {
+  const prevActiveContent = catalog.querySelector(
+    ".catalog__content:not(." + cl + ")"
+  );
+  prevActiveContent.classList.add(cl);
+  catalogContents[index].classList.remove(cl);
+};
+
+tabs.forEach((tab, tabIndex) => {
   tab.addEventListener("click", () => {
-    makeTabActive(tab);
+    makeTabActive(tab, "catalog__tab--active");
+    showContent(tabIndex, "visually-hidden");
   });
 });
 

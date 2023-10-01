@@ -14,6 +14,7 @@
     position: relative;
     overflow-y: hidden;
     flex-grow: 1;
+    min-height: 350px;
 
     &::after {
       position: absolute;
@@ -99,6 +100,7 @@
     li {
       position: relative;
       padding-left: 16px;
+      margin-bottom: 5px;
 
       font-weight: 300;
       color: #555555;

@@ -302,7 +302,7 @@ svg {
   clear: both;
 }
 
-.visually-hidden {
+/* .visually-hidden {
   position: absolute;
   z-index: -1;
   width: 0;
@@ -311,7 +311,8 @@ svg {
   margin: 0;
   border: none;
   overflow: hidden;
-}
+  opacity: 0 !important;
+} */
 
 .cover-pic,
 .contain-pic {
