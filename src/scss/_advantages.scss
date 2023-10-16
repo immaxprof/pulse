@@ -37,7 +37,40 @@
     }
 
     &--2 {
-      background-image: url("../icons/advantages/heart.png");
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: ceneter;
+
+      &:hover::before {
+        animation-play-state: paused;
+      }
+
+      // background-image: url("../icons/advantages/heart.png");
+
+      &::before {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 70px;
+        aspect-ratio: 1;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background: url("../icons/advantages/heart.png") center / auto no-repeat;
+
+        animation: heartbeat 1s ease-in-out infinite;
+
+        // animation-name: heartbeat;
+        // animation-duration: 1s;
+        // animation-timing-function: ease-in-out;
+        // animation-iteration-count: infinite;
+
+        // &:hover {
+        //   animation-play-state: paused;
+        // }
+      }
     }
 
     &--3 {

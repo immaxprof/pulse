@@ -2,7 +2,12 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 300px;
   margin-top: 36px;
+
+  &--mt23 {
+    margin-top: 23px;
+  }
 
   input {
     display: block;
@@ -33,6 +38,7 @@
 
 @media (max-width: 690px) {
   .feedform {
-    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
   }
 }

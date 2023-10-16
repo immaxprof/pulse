@@ -1,0 +1,29 @@
+@keyframes heartbeat {
+  from {
+    transform: translateX(-50%) scale(1);
+  }
+
+  50% {
+    transform: translateX(-50%) scale(1.3);
+  }
+
+  to {
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp {
+  animation: fadeInUp 1.2s forwards;
+}

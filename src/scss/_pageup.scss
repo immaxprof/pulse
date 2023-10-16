@@ -1,0 +1,21 @@
+.pageup {
+  position: fixed;
+  display: block;
+  width: 40px;
+
+  bottom: 20px;
+  right: 20px;
+
+  overflow: hidden;
+
+  //   &--show {
+  //     // display: block;
+  //     height: auto;
+  //     opacity: 1;
+  //     transition: opacity 1s;
+  //   }
+
+  img {
+    width: 100%;
+  }
+}
