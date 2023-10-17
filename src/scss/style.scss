@@ -1,20 +1,24 @@
-@import "mixins";
-@import "variables";
-@import "advantages";
-@import "consultation";
-@import "buttons";
-@import "header";
-@import "promo";
-@import "titles";
-@import "forms";
-@import "carousel";
-@import "catalog";
-@import "catalog-item";
-@import "responses";
-@import "footer";
-@import "modal";
-@import "pageup";
-@import "animation";
+@import "lib/custom-reset";
+@import "lib/fonts";
+@import "lib/slick";
+
+@import "blocks/mixins";
+@import "blocks/variables";
+@import "blocks/advantages";
+@import "blocks/consultation";
+@import "blocks/buttons";
+@import "blocks/header";
+@import "blocks/promo";
+@import "blocks/titles";
+@import "blocks/forms";
+@import "blocks/carousel";
+@import "blocks/catalog";
+@import "blocks/catalog-item";
+@import "blocks/responses";
+@import "blocks/footer";
+@import "blocks/modal";
+@import "blocks/pageup";
+@import "blocks/animation";
 
 // body {
 //   overflow: auto;
@@ -35,6 +39,7 @@ html {
   min-width: 302px;
   padding: 0 10px;
   margin: 0 auto;
+  // background-color: aqua;
 }
 
 :focus-visible {
